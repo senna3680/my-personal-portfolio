@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Meetelly</title>
+</head>
+<body>
+    <header>
+        <nav class="content-links">
+            <ul class="list">
+                <li><a href="/home" class="link">Home</a></li>
+                <li><a href="/projetos" class="link">Projetos</a></li>
+                <li><a href="/sobre" class="link">Sobre</a></li>
+                <li><a href="/contatos" class="link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-home">
+        <div class="content-details">
+            <img src="../static/images/background.jpg" alt="Imagem de perfil." class="profile-photo">
+            <section class="details">
+                <h1 class="title">Olá! Sou Matheus Sena</h1>
+                <p class="desc">Desenvolvedor Full Stack especializado em aplicações web e técnico em marketing digital.
+                    Explore meus projetos e acompanhe minha jornada profissional.</p>
+            </section>
+            <button class="blank">
+                Projetos <img src="../static/images/icons/arrow-up-right.svg" alt="Ícone." class="icon">
+            </button>
+        </div>
+    </div>
+    <div class="container-projects" id="projects">
+        <section id="separator">
+            <hr class="line">
+            <p class="desc">Projetos</p>
+            <hr class="line">
+        </section>
+        <div class="content">
+            <div class="content-project">
+                <img src="../static/images/background.jpg" alt="Imagem de fundo." class="background">
+                <section class="details">
+                    <h1 class="title">Projeto Vazio</h1>
+                    <button class="github">Repositório</button>
+                    <button class="view">Visitar</button>
+                </section>
+            </div>
+            <div class="content-project">
+                <img src="../static/images/background.jpg" alt="Imagem de fundo." class="background">
+                <section class="details">
+                    <h1 class="title">Projeto Vazio</h1>
+                    <button class="github">Repositório</button>
+                    <button class="view">Visitar</button>
+                </section>
+            </div>
+            <div class="content-project">
+                <img src="../static/images/background.jpg" alt="Imagem de fundo." class="background">
+                <section class="details">
+                    <h1 class="title">Projeto Vazio</h1>
+                    <button class="github">Repositório</button>
+                    <button class="view">Visitar</button>
+                </section>
+            </div>
+            <div class="content-project other">
+                <img src="../static/images/background.jpg" alt="Imagem de fundo." class="background">
+                <section class="details">
+                    <h1 class="title">Projeto Vazio</h1>
+                    <button class="github">Repositório</button>
+                    <button class="view">Visitar</button>
+                </section>
+            </div>
+            <script>
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+            </script>
+        </div>
+        <button class="blank">Ver mais</button>
+    </div>
+    <div class="container-about">
+        <section id="separator">
+            <hr class="line">
+            <p class="desc">Sobre mim</p>
+            <hr class="line">
+        </section>
+        <div class="container-box">
+            <div class="content-items">
+                <img src="../static/images/icons/cloud.svg" alt="" class="icon">
+                <h1 class="title">Desenvolvedor Full Stack Web</h1>
+                <p class="desc">Sou programador full stack com foco em desenvolvimento web. Atuo tanto no frontend
+                    quanto no backend, sempre buscando criar soluções modernas, performáticas e escaláveis.</p>
+            </div>
+            <div class="content-items">
+                <img src="../static/images/icons/mobile.svg" alt="" class="icon">
+                <h1 class="title">Explorando o Mundo Mobile</h1>
+                <p class="desc">Tenho grande interesse em desenvolvimento mobile. Estou sempre explorando novas
+                    tecnologias para criar apps responsivos, funcionais e com excelente experiência de usuário.</p>
+            </div>
+        </div>
+        <div class="container-box">
+            <div class="content-items">
+                <img src="../static/images/icons/laptop.svg" alt="" class="icon">
+                <h1 class="title">Técnico em Marketing Digital</h1>
+                <p class="desc">Sou técnico em marketing digital, com conhecimento em SEO, tráfego pago e estratégias de
+                    conversão. Entendo a importância de unir tecnologia e marketing para gerar resultados reais.</p>
+            </div>
+            <div class="content-items">
+                <img src="../static/images/icons/marketing.svg" alt="" class="icon">
+                <h1 class="title">Integração entre Código e Estratégia</h1>
+                <p class="desc">Utilizo minhas habilidades de programação e marketing em conjunto para entregar soluções
+                    completas.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-contact">
+        <h1 class="title">Siga-me</h1>
+        <div class="links">
+            <a href="https://github.com/senna3680" target="_blank" class="link"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/senna86___" target="_blank" class="link"><i
+                    class='bx bxl-instagram'></i></a>
+            <a href="mailto:matheusynw3@gmail.com" target="_blank" class="link"><i class='bx bx-envelope'></i></a>
+        </div>
+        <section id="separator">
+            <hr class="line">
+            <p class="desc">Mensagem</p>
+            <hr class="line">
+        </section>
+        <form action="/mensagem" method="POST">
+            <input name="email" placeholder="Email" type="email">
+            <textarea name="texto" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        {% if show_alert %}
+        <script type="text/javascript">
+            alert('Mensagem enviada com sucesso!');
+        </script>
+        {% endif %}
+    </div>
+    <footer>
+        <section class="container-copy">
+            <span class="desc">&copy; Matheus Sena, Todos os Direitos Reservados 2025.</span>
+        </section>
+    </footer>
+</body>
+</html>
