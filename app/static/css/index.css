@@ -617,6 +617,10 @@ footer .container-copy {
         height: 50px;
     }
 
+    .container-home .content-details .details {
+        padding: 0 5px;
+    }
+
     .container-about .container-box .content-items .title {
         font-size: 15px;
         text-align: center;
